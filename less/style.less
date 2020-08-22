@@ -1,0 +1,554 @@
+@backImage: url('https://4u-spb.ru/content/slideshow_index/bolshoi3.jpg');
+@header-background-color: #25293c6e;
+@acquaintance-block-fonts-size: 40px;
+@acquaintance-block-fonts-family: 'Arial';
+@acquaintance-block-fonts-color: #fff;
+@acquaintance-block-width: 450px;
+@acquaintance-height: 24%;
+@acquaintance-block-height: 100%;
+
+@userRegister-block-width: 36%;
+@userRegister-height: 65%;
+@userRegister-block-height: 90%;
+@userRegister-fontSize: 19px;
+
+@color-yellow: #2ae6bc;
+@inform-block-color: #004D69FF;
+
+
+*{
+	margin: 0px;
+	padding: 0px;
+}
+.backImage {
+	background-image: @backImage;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: auto;
+	height: 1000px;
+}
+#header {	
+	background-color: @header-background-color;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+#acquaintance	{
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	justify-content: space-around;
+	height: @acquaintance-height;
+	* {
+		margin: 10px 0px;
+	}
+	.siteName {
+		width: @acquaintance-block-width;
+		height: @acquaintance-block-height;
+
+		span:first-child {
+			color:@color-yellow;
+		}
+		span:last-child {
+			font-size: @acquaintance-block-fonts-size/2.2;
+			font-weight: normal;
+		}
+	}
+	.contacts {
+	    width: @acquaintance-block-width;
+		height: @acquaintance-block-height;
+
+		span:first-child {
+			font-size: @acquaintance-block-fonts-size/2.2;
+			font-weight: normal;
+			text-align: right;
+		}
+		.number {
+			color: @color-yellow;
+		    font-size: @acquaintance-block-fonts-size/1.5;
+		    text-align: right;
+		}
+		span:last-child {
+		    border-bottom: 11px solid @acquaintance-block-fonts-color;
+		    width: @acquaintance-block-width/15;
+		    float: right;
+		}
+	}
+	span {
+		color: @acquaintance-block-fonts-color;
+		font-family: @acquaintance-block-fonts-family;
+		font-size: @acquaintance-block-fonts-size;
+		display: block;
+		font-weight: bold;
+		text-shadow: 1px 1px 1px #000;
+	}
+}
+#userRegister {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	justify-content: space-around;
+	width: 100%;
+	height: @userRegister-height;
+	position: relative;
+
+	.someInfo {
+		color: @acquaintance-block-fonts-color;
+		width: @userRegister-block-width;
+		height: @userRegister-block-height;
+		position: relative;
+		animation-name: show;
+		animation-duration: 2s;
+
+		span:first-child {
+		    font-size: @userRegister-fontSize;
+    		color: @color-yellow;
+			text-shadow: 1px 1px 3px #000;
+		}
+		h1 {
+			font-size: @userRegister-fontSize*5;
+			text-transform: uppercase; 
+			text-shadow: 1px 1px 10px #000;
+		}
+		span:last-child {
+			font-size: @userRegister-fontSize;
+			font-style: italic;
+		}
+		* {
+			padding: 20px 0px;
+		}
+	}
+
+	.border-animation {
+		right: 50px;
+	    border: 13px solid #fff;
+	    width: 32%;
+	    height: 85%;
+	    position: absolute;
+	    bottom: 112px;
+	    animation-name: move;
+	    animation-duration: 2s;
+		}
+
+	.form {	
+		width: @userRegister-block-width;
+		height: @userRegister-block-height;
+		background-color: #1c2c40;
+		position: relative;
+		animation-name: showForm;
+		animation-duration: 2s;
+
+ 
+		.mainForm {
+			height: 100%;
+			width: 88%;
+			margin: auto;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+			
+
+			* {
+				margin: 15px 0px;
+			}
+
+			h1 {
+				text-transform: uppercase;
+				color: @color-yellow;
+				font-size: @userRegister-fontSize*2;
+			}
+			span {
+				color: @acquaintance-block-fonts-color;
+				font-size: @userRegister-fontSize;
+			}
+			.userData {
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+
+				input {
+    				height: 40px;
+					background-color: #fff;
+					width: 47%;
+					border: none;
+					font-weight: normal;
+				}
+			}
+
+			textarea {
+				width: 100%;
+				height: 100px;
+				margin: auto;
+				border: none;
+				font-size: @userRegister-fontSize + 2;
+			}
+			input {
+				width: 100%;
+				height: 40px;
+				border: none;
+				background-color: darken(@color-yellow, 10%);
+				color: @acquaintance-block-fonts-color;
+				font-size: @userRegister-fontSize + 2;
+				font-weight: bold;
+			}
+			.icons {
+				div {
+				    width: 30px;
+				    height: 30px;
+				    background-color: #fff;
+				    display: inline-block;
+				    text-align: center;
+				    border-radius: 25px;
+
+
+					img {
+						margin: 6px 0px;
+						padding: 0px;
+						width: 18px;
+					}
+				}
+			}
+		}
+	}
+}
+
+#appartmentInfo {
+	width: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 70px auto;
+
+    h3 {
+    	padding: 10px 0px;
+    	font-family: @acquaintance-block-fonts-family;
+    	color: saturate(darken(@color-yellow, 10%),20%);
+    	margin: 0px 80px;
+    }
+    h1 {
+    	padding: 10px 0px;
+    	text-transform: uppercase;
+    	font-family:@acquaintance-block-fonts-family;
+    	color: @inform-block-color;
+    	font-size: @userRegister-fontSize*2;
+    	letter-spacing: 2px;
+    	font-weight: bold;
+    	margin: 15px 80px;
+    }
+    #infoBlock {
+    	display: flex;
+    	flex-direction: row;
+    	justify-content: flex-start;
+   	    align-items: flex-start;
+   	    width: 100%;
+
+        span {
+        	width: 40%;
+        	font-family:@acquaintance-block-fonts-family;
+	    	font-size: @userRegister-fontSize - 3;
+	    	text-align: justify;
+	    	letter-spacing: 0px;
+	    	word-spacing: 2px;
+	    	color: darken(@inform-block-color, 10%);
+	    	margin: 25px 80px;
+        }
+        span:last-child {
+        	h3 {
+        		padding: 0px;
+        		margin: 0px;
+        	}
+			table {
+				width: 100%;
+				margin: 10px 0px;
+			}
+        	tr {
+				height: 40px;
+        	}
+ 
+        }
+    }
+}
+#apartPicture {
+	display: inline-block;
+	width: 100%;
+	height: 700px;
+	position: relative;
+
+	img {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		animation-name: showImg;
+		animation-duration: 6s;
+	}
+
+}
+#advantages {
+	width: 100%;
+	height: 600px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+
+	h1 {
+		color: @color-yellow;
+		font-size: @userRegister-fontSize * 4;	
+	}
+
+	h3 {
+		margin-top: 40px;
+		color: darken(@inform-block-color, 5%);
+		font-size: @userRegister-fontSize * 2;
+	}
+
+	.squares-block {
+		display: flex;
+		flex-direction: row;
+		
+		width: 850px;
+		
+		#square-relative {
+			position: relative;
+			width: 200px;
+			height: 200px;
+			.square-icon {
+				background-color: darken(@inform-block-color, 5%);
+				width: 150px;
+				height: 150px;
+				position: absolute;
+				z-index: 2;
+				top: 15px;
+    			left: 15px;
+
+    			svg {
+    				width: 40px;
+				    height: 40px;
+				    margin: 54px
+    			}
+			}
+			.square-border {
+				position: absolute;
+				border: 4px solid @color-yellow;
+				width: 150px;
+				height: 150px;
+				z-index: 1;
+			}
+		}
+
+		.square-line {
+			margin: 80px 15px;
+		    height: 0px;
+		    width: 180px;
+		    border: 1px solid @color-yellow;
+		}
+	}
+	.block-info {
+		width: 850px;
+	    display: flex;
+	    flex-direction: row;
+	    justify-content: space-between;
+
+		div {
+			width: 200px;
+			height: 150px;
+			text-align: center;
+
+			h3 {
+				color: @color-yellow;
+				font-size: @userRegister-fontSize;
+				margin: 15px 0px;
+			}
+			span {
+				text-align: justify;
+				font-size: @userRegister-fontSize - 3;
+			}
+		}
+	}
+}
+#footer {
+	width: 100%;
+	height: 650px;
+	position: relative;
+	overflow: hidden;
+
+	#video {
+		position: absolute;
+		z-index: 0;
+		width: auto;
+		height: auto;
+		min-height: 100%;
+		max-width: 100%;
+	}
+
+	.footer-information {
+		position: absolute;
+		z-index: 5;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-around;
+		height: 100%;
+		padding: 0px 150px;
+
+		&-text{	
+			opacity: 0;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+			height: 400px; 
+			width: 40%;
+			text-align: justify;
+			color: #fff;
+			font-size: @userRegister-fontSize;
+			text-shadow: 1px 1px 1px #000;
+			
+
+			h1 {
+				color: @color-yellow;
+				font-size: @userRegister-fontSize*3;
+				text-shadow: 1px 1px 1px #000;
+ 
+			}
+			
+			a {
+				padding-top: 30px;
+				width: 54px;
+    			height: 50px;
+				svg {
+					background: #141d4063;
+				    fill: #000000;
+				    border-radius: 36px;
+				}
+			}
+		}
+
+		.borderLine {
+			opacity: 0;
+			border: 10px solid #fff;
+		    position: absolute;
+		    z-index: 1;
+		    width: 33%;
+		    height: 72%;
+		    right: 141px;
+		    bottom: 110px;
+		    
+						
+			}
+
+		&-form {
+			position: relative;
+			z-index: 5;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+			align-items: center;
+			background-color: darken(@inform-block-color, 15%);
+			flex-basis: 50%;
+			height: 500px;
+
+
+			h1 {
+				    padding-top: 30px;
+				    height: 60px;
+				    font-size: 38px;
+				    color: #2ae6bc;
+				    text-align: left;
+				    text-shadow: 1px 1px 1px #000;
+			}
+			.userData {
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+				width: 90%;
+
+
+				input {
+					font-size: @userRegister-fontSize;
+    				height: 40px;
+    				width: 46%;
+					background-color: #fff;
+					border: none;
+					font-weight: normal;
+				}
+			}
+
+			.message {
+				border:none;
+				width: 90%;
+				height: 100px;
+				font-size: @userRegister-fontSize;
+			}
+
+			input {
+				font-size: @userRegister-fontSize;
+				width: 90%;
+				height: 48px;
+				border: none;
+				background-color: darken(@color-yellow, 5%);
+				color: #fff;
+			}
+			
+			.icons {
+				align-self: flex-start;
+				padding-left: 25px;
+				div {
+				    width: 30px;
+				    height: 30px;
+				    background-color: #fff;
+				    display: inline-block;
+				    text-align: center;
+				    border-radius: 25px;
+
+
+					img {
+						margin: 6px 0px;
+						padding: 0px;
+						width: 18px;
+					}
+				}
+			}
+		}
+	}
+	
+}
+@keyframes move {
+	0% {
+		right: 180px;
+	}
+
+	100% {
+		right: 50px;
+	}
+}
+@keyframes show {
+	0% {
+		left: -1000px;
+	}
+	100% {
+		left: 0px;
+	}
+}
+@keyframes showForm {
+
+	0% {
+		right: -1000px;
+	}
+	100% {
+		right: 0px;
+	}
+}
+@keyframes showImg {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+} 
+

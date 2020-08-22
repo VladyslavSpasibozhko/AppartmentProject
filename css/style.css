@@ -1,0 +1,477 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+.backImage {
+  background-image: url('https://4u-spb.ru/content/slideshow_index/bolshoi3.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: auto;
+  height: 1000px;
+}
+#header {
+  background-color: #25293c6e;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+#acquaintance {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-around;
+  height: 24%;
+}
+#acquaintance * {
+  margin: 10px 0px;
+}
+#acquaintance .siteName {
+  width: 450px;
+  height: 100%;
+}
+#acquaintance .siteName span:first-child {
+  color: #2ae6bc;
+}
+#acquaintance .siteName span:last-child {
+  font-size: 18.18181818px;
+  font-weight: normal;
+}
+#acquaintance .contacts {
+  width: 450px;
+  height: 100%;
+}
+#acquaintance .contacts span:first-child {
+  font-size: 18.18181818px;
+  font-weight: normal;
+  text-align: right;
+}
+#acquaintance .contacts .number {
+  color: #2ae6bc;
+  font-size: 26.66666667px;
+  text-align: right;
+}
+#acquaintance .contacts span:last-child {
+  border-bottom: 11px solid #fff;
+  width: 30px;
+  float: right;
+}
+#acquaintance span {
+  color: #fff;
+  font-family: 'Arial';
+  font-size: 40px;
+  display: block;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px #000;
+}
+#userRegister {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-around;
+  width: 100%;
+  height: 65%;
+  position: relative;
+}
+#userRegister .someInfo {
+  color: #fff;
+  width: 36%;
+  height: 90%;
+  position: relative;
+  animation-name: show;
+  animation-duration: 2s;
+}
+#userRegister .someInfo span:first-child {
+  font-size: 19px;
+  color: #2ae6bc;
+  text-shadow: 1px 1px 3px #000;
+}
+#userRegister .someInfo h1 {
+  font-size: 95px;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 10px #000;
+}
+#userRegister .someInfo span:last-child {
+  font-size: 19px;
+  font-style: italic;
+}
+#userRegister .someInfo * {
+  padding: 20px 0px;
+}
+#userRegister .border-animation {
+  right: 50px;
+  border: 13px solid #fff;
+  width: 32%;
+  height: 85%;
+  position: absolute;
+  bottom: 112px;
+  animation-name: move;
+  animation-duration: 2s;
+}
+#userRegister .form {
+  width: 36%;
+  height: 90%;
+  background-color: #1c2c40;
+  position: relative;
+  animation-name: showForm;
+  animation-duration: 2s;
+}
+#userRegister .form .mainForm {
+  height: 100%;
+  width: 88%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+#userRegister .form .mainForm * {
+  margin: 15px 0px;
+}
+#userRegister .form .mainForm h1 {
+  text-transform: uppercase;
+  color: #2ae6bc;
+  font-size: 38px;
+}
+#userRegister .form .mainForm span {
+  color: #fff;
+  font-size: 19px;
+}
+#userRegister .form .mainForm .userData {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#userRegister .form .mainForm .userData input {
+  height: 40px;
+  background-color: #fff;
+  width: 47%;
+  border: none;
+  font-weight: normal;
+}
+#userRegister .form .mainForm textarea {
+  width: 100%;
+  height: 100px;
+  margin: auto;
+  border: none;
+  font-size: 21px;
+}
+#userRegister .form .mainForm input {
+  width: 100%;
+  height: 40px;
+  border: none;
+  background-color: #17c69f;
+  color: #fff;
+  font-size: 21px;
+  font-weight: bold;
+}
+#userRegister .form .mainForm .icons div {
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  display: inline-block;
+  text-align: center;
+  border-radius: 25px;
+}
+#userRegister .form .mainForm .icons div img {
+  margin: 6px 0px;
+  padding: 0px;
+  width: 18px;
+}
+#appartmentInfo {
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 70px auto;
+}
+#appartmentInfo h3 {
+  padding: 10px 0px;
+  font-family: 'Arial';
+  color: #01dcab;
+  margin: 0px 80px;
+}
+#appartmentInfo h1 {
+  padding: 10px 0px;
+  text-transform: uppercase;
+  font-family: 'Arial';
+  color: #004D69FF;
+  font-size: 38px;
+  letter-spacing: 2px;
+  font-weight: bold;
+  margin: 15px 80px;
+}
+#appartmentInfo #infoBlock {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+}
+#appartmentInfo #infoBlock span {
+  width: 40%;
+  font-family: 'Arial';
+  font-size: 16px;
+  text-align: justify;
+  letter-spacing: 0px;
+  word-spacing: 2px;
+  color: #002836;
+  margin: 25px 80px;
+}
+#appartmentInfo #infoBlock span:last-child h3 {
+  padding: 0px;
+  margin: 0px;
+}
+#appartmentInfo #infoBlock span:last-child table {
+  width: 100%;
+  margin: 10px 0px;
+}
+#appartmentInfo #infoBlock span:last-child tr {
+  height: 40px;
+}
+#apartPicture {
+  display: inline-block;
+  width: 100%;
+  height: 700px;
+  position: relative;
+}
+#apartPicture img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  animation-name: showImg;
+  animation-duration: 6s;
+}
+#advantages {
+  width: 100%;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+#advantages h1 {
+  color: #2ae6bc;
+  font-size: 76px;
+}
+#advantages h3 {
+  margin-top: 40px;
+  color: #003a50;
+  font-size: 38px;
+}
+#advantages .squares-block {
+  display: flex;
+  flex-direction: row;
+  width: 850px;
+}
+#advantages .squares-block #square-relative {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+#advantages .squares-block #square-relative .square-icon {
+  background-color: #003a50;
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  z-index: 2;
+  top: 15px;
+  left: 15px;
+}
+#advantages .squares-block #square-relative .square-icon svg {
+  width: 40px;
+  height: 40px;
+  margin: 54px;
+}
+#advantages .squares-block #square-relative .square-border {
+  position: absolute;
+  border: 4px solid #2ae6bc;
+  width: 150px;
+  height: 150px;
+  z-index: 1;
+}
+#advantages .squares-block .square-line {
+  margin: 80px 15px;
+  height: 0px;
+  width: 180px;
+  border: 1px solid #2ae6bc;
+}
+#advantages .block-info {
+  width: 850px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#advantages .block-info div {
+  width: 200px;
+  height: 150px;
+  text-align: center;
+}
+#advantages .block-info div h3 {
+  color: #2ae6bc;
+  font-size: 19px;
+  margin: 15px 0px;
+}
+#advantages .block-info div span {
+  text-align: justify;
+  font-size: 16px;
+}
+#footer {
+  width: 100%;
+  height: 650px;
+  position: relative;
+  overflow: hidden;
+}
+#footer #video {
+  position: absolute;
+  z-index: 0;
+  width: auto;
+  height: auto;
+  min-height: 100%;
+  max-width: 100%;
+}
+#footer .footer-information {
+  position: absolute;
+  z-index: 5;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  height: 100%;
+  padding: 0px 150px;
+}
+#footer .footer-information-text {
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 400px;
+  width: 40%;
+  text-align: justify;
+  color: #fff;
+  font-size: 19px;
+  text-shadow: 1px 1px 1px #000;
+}
+#footer .footer-information-text h1 {
+  color: #2ae6bc;
+  font-size: 57px;
+  text-shadow: 1px 1px 1px #000;
+}
+#footer .footer-information-text a {
+  padding-top: 30px;
+  width: 54px;
+  height: 50px;
+}
+#footer .footer-information-text a svg {
+  background: #141d4063;
+  fill: #000000;
+  border-radius: 36px;
+}
+#footer .footer-information .borderLine {
+  opacity: 0;
+  border: 10px solid #fff;
+  position: absolute;
+  z-index: 1;
+  width: 33%;
+  height: 72%;
+  right: 141px;
+  bottom: 110px;
+}
+#footer .footer-information-form {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #00151c;
+  flex-basis: 50%;
+  height: 500px;
+}
+#footer .footer-information-form h1 {
+  padding-top: 30px;
+  height: 60px;
+  font-size: 38px;
+  color: #2ae6bc;
+  text-align: left;
+  text-shadow: 1px 1px 1px #000;
+}
+#footer .footer-information-form .userData {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 90%;
+}
+#footer .footer-information-form .userData input {
+  font-size: 19px;
+  height: 40px;
+  width: 46%;
+  background-color: #fff;
+  border: none;
+  font-weight: normal;
+}
+#footer .footer-information-form .message {
+  border: none;
+  width: 90%;
+  height: 100px;
+  font-size: 19px;
+}
+#footer .footer-information-form input {
+  font-size: 19px;
+  width: 90%;
+  height: 48px;
+  border: none;
+  background-color: #1addb1;
+  color: #fff;
+}
+#footer .footer-information-form .icons {
+  align-self: flex-start;
+  padding-left: 25px;
+}
+#footer .footer-information-form .icons div {
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  display: inline-block;
+  text-align: center;
+  border-radius: 25px;
+}
+#footer .footer-information-form .icons div img {
+  margin: 6px 0px;
+  padding: 0px;
+  width: 18px;
+}
+@keyframes move {
+  0% {
+    right: 180px;
+  }
+  100% {
+    right: 50px;
+  }
+}
+@keyframes show {
+  0% {
+    left: -1000px;
+  }
+  100% {
+    left: 0px;
+  }
+}
+@keyframes showForm {
+  0% {
+    right: -1000px;
+  }
+  100% {
+    right: 0px;
+  }
+}
+@keyframes showImg {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
